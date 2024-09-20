@@ -1,0 +1,256 @@
+/* definition colors */
+:root{
+    --color-black: #000;
+    --color-white: #ffffff;
+    --color-linkLightBlue: #2997FF;
+    --color-gray: #6e6e73;
+    --color-gray-light: #FBFBFD;
+    --color-linkDarkBlue: #0066CC;
+    --color-darken-gray: #1d1d1f;
+    --header-height: 44px;
+    
+}
+/* end colors */
+
+/* responsive */
+body{
+    color: var(--color-white);
+}
+
+.container{
+    width: 1280px;
+    max-width: 100%;
+    margin-inline: auto;
+}
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+/* end responsive*/
+
+/* header */
+header{
+    background-color: var(--color-black);
+
+    .container{
+        display: flex; /* deixa as linhas unidades em vertical */
+        align-items: center;
+        justify-content: space-between;
+        height: var(--header-height);
+
+    }
+
+}
+
+.navigation ul{
+    display: flex;
+    
+    li{
+        margin: 0 25px;
+
+    }
+    a{
+        color: var(--color-white);
+        size: 16px;
+    }
+}
+
+.header-actions{
+    display: flex;
+    align-items: center;
+    
+    button{
+        margin: 0 25px;
+    }
+}
+/* end header */
+/* start Banner */
+.section-banner{
+    background-color: var(--color-black);
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - var(--header-height)); /*cobre a telas inteira, porem posso retirar, so escolhi cubrir a tela inteira porque achei mais bonito  */
+
+    .title{
+        margin: 50px 0 15px;
+    }
+    .banner-img{
+        margin-top: 75px;
+    }
+    .link{
+        margin-top: 15px;
+    }
+
+}
+/* end banner 1 */
+/* inicio de estilo reutilziavel */
+.title{
+    /* Caso haja outro titulo Padrao, essa sera a configuração padroa delee, por isos ele nao esta dentro do section-banner */
+    font-size: 56px;
+    font-weight: 700px;
+    line-height: 60px;
+    letter-spacing: -0.28px;
+}
+
+.description-top{
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: -0.11px;
+    color: var(--color-gray);
+    text-align: center;
+    margin-top: 10px;
+}
+.description{
+    font-size: 21px;
+    letter-spacing: 0.34px;
+    line-height: 26px;
+    margin-top: 5px;
+    text-align: center;
+}
+.description.dark{
+    color: var(--color-darken-gray);
+}
+.description.light{
+    color: var(--color-white);
+}
+
+
+.subtitle{
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+}
+.subtitle.dark{
+    color: var(--color-darken-gray);
+}
+
+.subtitle.light{
+    color: var(--color-white);
+}
+
+
+.link{
+    font-weight: 400;
+    display: block;
+}
+.link.large{
+    font-size: 21px;
+}
+.link.medium{
+    font-size: 17px;
+}
+
+
+.link.primary{
+    color: var(--color-linkLightBlue);
+}
+.link.secondary{
+    color: var(--color-linkDarkBlue);
+}
+
+
+
+/* fim dos estilos reutilziavel */
+/* start secundary Banner */
+.section-banner_secondary{
+    margin-top: 10px;
+    img{
+        width: 100%;
+    }
+    
+}
+/* end secundary Banner */
+/* start products */
+.section-product{
+    background-color: var(--color-gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    .title{
+        color: var(--color-black);
+        margin-bottom: 8px;
+    }
+
+    .links{
+        margin: 10px 0 25px;
+        display: flex;
+        align-items: center;
+        .link{
+            margin: 0 20px;
+        }
+    }
+}
+/* end products */
+/* start card section */
+.section-cards_products{
+    ul{
+        display: flex;
+        flex-wrap: wrap; /*quebra de linha*/
+        width: calc(738px*2);
+        max-width: 100%;
+        margin-inline: auto;
+
+
+        .card-item{
+            width: 730.5px;
+            max-width: calc(50%-5px);
+            height: 582px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2.5px;
+            padding-top: 50px;
+            border-radius: 5px;
+
+
+            /* breakpoint para responsatividade */
+            .links{
+                display: flex;
+                .link{
+                    margin: 10px;
+                }
+            }
+
+
+            
+        }
+        .card-item:first-child{
+            background-image: url('../img/figure/card-Iphone_14Pro_image.jpg');
+        }
+        .card-item:nth-child(2){
+            background-image: url('../img/figure/Card-ipad_image.jpg');
+        }
+        .card-item:nth-child(3){
+            background-image: url('../img/figure/Card-AirPods_swimming.jpg');
+        }
+        .card-item:nth-child(4){
+            background-image: url('../img/figure/Card-Apple_Watch_Series8.jpg');
+        }
+        .card-item:nth-child(5){
+            background-image: url('../img/figure/card-watch-ultra.jpg');
+        }
+        .card-item:nth-child(6){
+            background-image: url('../img/figure/card-credit-cardApple.jpg');
+        }
+    }
+}
+/* end card section */
+/* start carrosel */
+.section-slide{
+    img{
+        width: 100%;
+    }
+}
+
+.glide__slide{
+    display: flex;
+    align-items: center;
+}
+/* end carrosel */
+
