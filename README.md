@@ -1,5 +1,7 @@
 # Site
-Esse foi um site realizando clonadno o site original da Apple Shop durante o periodo de natal
+Esse foi um site realizando clonadno o site original da Apple Shop durante o periodo de natal.
+Vale destacar que, o site e totalemtne responsivo, ou seja, ele funciona tambem para celulares
+
 
 ## Tecnologias
 Foi utilziado para a realização do site o HTML, CSS e JavaScript
